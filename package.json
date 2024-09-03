@@ -1,21 +1,41 @@
 {
-  "name": "search",
+  "name": "ReactPOC",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "jest": "npm test -- --coverage",
+    "eject": "react-scripts eject",
+    "server": "json-server --watch -p 8000 db.json"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.16.6",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@mui/x-charts": "^7.12.0",
+    "@mui/x-data-grid": "^7.12.0",
+    "@testing-library/user-event": "^14.5.2",
+    "axios": "^1.7.2",
+    "install": "^0.13.0",
+    "jest-fetch-mock": "^3.0.3",
+    "json-server": "^1.0.0-beta.1",
+    "npm": "^10.8.2",
+    "react": "^18.3.1",
+    "React_POC": "file:",
+    "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
+    "react-paginate": "^8.2.0",
+    "react-router-dom": "^6.25.1",
+    "react-scripts": "5.0.1",
+    "ReactPOC": "file:",
+    "search": "file:",
+    "styled-components": "^6.1.12",
+    "ts-jest": "^29.2.4",
+    "web-vitals": "^2.1.4"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +54,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "axios-mock-adapter": "^2.0.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "whatwg-fetch": "^3.6.20"
   }
 }

@@ -1,38 +1,137 @@
 .App {
+  text-align: start;
+  padding: 20px;
+}
+
+.inputLable,
+.searchText {
+  font-weight: bold;
+}
+
+.storyTitle {
+  font-size: 1.2em;
+  color: rgb(35, 122, 129);
+  text-decoration: underline;
+}
+
+.storiesTable {
+  width: 96%;
+  border-collapse: collapse;
+}
+
+.storiesTable th,
+.storiesTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.storiesTable th {
+  background-color: #f2f2f2;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tableRow:hover {
+  background-color: #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.removeButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.removeButton:hover {
+  background-color: #d32f2f;
+}
+
+.updateButton {
+  background-color: #817c00;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.updateButton:hover {
+  background-color: #696607;
+}
+
+.search-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.inputLabel {
+  font-weight: bold;
+}
+
+.recordCountContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: -8px;
+  margin-bottom: -12px;
+}
+
+.searchTermsCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.filterdcountsectionCont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: -1% 7% -1% 7%;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  position: relative;
+  bottom: 2%;
+  right: 2%;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  color: #249493;
+  text-decoration: none;
+  padding: 7px 11px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: #007d88;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination .active a {
+  background-color: #249493;
+  color: white;
+  border: 1px solid #249493;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.numofrecordsdropdown{
+  margin-top: 13px;
 }

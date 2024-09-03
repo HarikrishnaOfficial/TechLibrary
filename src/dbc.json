@@ -1,0 +1,162 @@
+{
+  "stories": [
+    {
+      "title": "React",
+      "url": "https://reactjs.org",
+      "author": "Jordan Walke",
+      "num_comments": 3,
+      "points": 8,
+      "id": "31ab",
+      "postedOn": "2023-01-15"
+    },
+    {
+      "title": "Redux",
+      "url": "https://redux.js.org",
+      "author": "Dan Abramov, Andrew Clark",
+      "num_comments": 2,
+      "points": 5,
+      "id": "8dab",
+      "postedOn": "2023-02-20"
+    },
+    {
+      "title": "JavaScript",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "author": "Brendan Eich",
+      "num_comments": 10,
+      "points": 8,
+      "id": "2f59",
+      "postedOn": "2023-03-10"
+    },
+    {
+      "title": "TypeScript",
+      "url": "https://www.typescriptlang.org",
+      "author": "Anders Hejlsberg",
+      "num_comments": 7,
+      "points": 6,
+      "id": "a0aa",
+      "postedOn": "2023-04-05"
+    },
+    {
+      "title": "Node.js",
+      "url": "https://nodejs.org",
+      "author": "Ryan Dahl",
+      "num_comments": 5,
+      "points": 9,
+      "id": "c0dc",
+      "postedOn": "2023-05-18"
+    },
+    {
+      "title": "GraphQL",
+      "url": "https://graphql.org",
+      "author": "Lee Byron, Nick Schrock",
+      "num_comments": 4,
+      "points": 7,
+      "id": "ded1",
+      "postedOn": "2023-06-22"
+    },
+    {
+      "title": "Python",
+      "url": "https://www.python.org",
+      "author": "Guido van Rossum",
+      "num_comments": 5,
+      "points": 10,
+      "id": "bd69",
+      "postedOn": "2023-07-30"
+    },
+    {
+      "title": "Java",
+      "url": "https://www.java.com/en/",
+      "author": "James Gosling",
+      "num_comments": 8,
+      "points": 11,
+      "id": "5596",
+      "postedOn": "2023-08-14"
+    }
+  ],
+  "books": [
+    {
+      "name": "To Kill a Mockingbird",
+      "writer": "Harper Lee",
+      "year": 1960,
+      "category": "Fiction",
+      "price": 10.99
+    },
+    {
+      "name": "1984",
+      "writer": "George Orwell",
+      "year": 1949,
+      "category": "Fiction",
+      "price": 8.99
+    },
+    {
+      "name": "Sapiens: A Brief History of Humankind",
+      "writer": "Yuval Noah Harari",
+      "year": 2011,
+      "category": "Non-Fiction",
+      "price": 14.99
+    },
+    {
+      "name": "Educated",
+      "writer": "Tara Westover",
+      "year": 2018,
+      "category": "Non-Fiction",
+      "price": 12.99
+    },
+    {
+      "name": "Dune",
+      "writer": "Frank Herbert",
+      "year": 1965,
+      "category": "Science Fiction",
+      "price": 9.99
+    },
+    {
+      "name": "Neuromancer",
+      "writer": "William Gibson",
+      "year": 1984,
+      "category": "Science Fiction",
+      "price": 7.99
+    },
+    {
+      "name": "The Hobbit",
+      "writer": "J.R.R. Tolkien",
+      "year": 1937,
+      "category": "Fantasy",
+      "price": 11.99
+    },
+    {
+      "name": "Harry Potter and the Sorcerer's Stone",
+      "writer": "J.K. Rowling",
+      "year": 1997,
+      "category": "Fantasy",
+      "price": 10.49
+    },
+    {
+      "name": "The Great Gatsby",
+      "writer": "F. Scott Fitzgerald",
+      "year": 1925,
+      "category": "Fiction",
+      "price": 10.99
+    },
+    {
+      "name": "The Catcher in the Rye",
+      "writer": "J.D. Salinger",
+      "year": 1951,
+      "category": "Fiction",
+      "price": 9.99
+    },
+    {
+      "name": "Becoming",
+      "writer": "Michelle Obama",
+      "year": 2018,
+      "category": "Non-Fiction",
+      "price": 16.99
+    },
+    {
+      "name": "The Road",
+      "writer": "Cormac McCarthy",
+      "year": 2006,
+      "category": "Fiction",
+      "price": 12.99
+    }
+  ]
+}

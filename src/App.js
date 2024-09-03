@@ -1,23 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import AddStoryForm from './Components/AddStoryForm';
+import StoriesList from './Components/StoriesList';
+import StoriesListPaginated from './Components/StoriesListPaginated';
+import AboutUs from './Components/AboutUs';
+import React from 'react';
+import Navbar from './Components/Navbar';
+import ContactUs from './Components/ContactUs';
+import LandingPage from './mainfolder_MUI/pages/LandingPage';
+import ScopedSearch from './Components/ScopedSearch';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Box, ThemeProvider, createTheme } from '@mui/material';
+import { useState } from 'react';
 
 function App() {
+  const [mode, setMode] = useState("light");
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: mode
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<StoriesList />} />
+          <Route path="/addStory" element={<AddStoryForm />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/pagination" element={<StoriesListPaginated />} />
+          <Route path="/scopedSearch" element={<ScopedSearch />} />
+          <Route 
+            path="/materialUI" 
+            element={
+              <ThemeProvider theme={darkTheme}>
+                <Box bgcolor={"background.default"}>
+                  <LandingPage mode={mode} setMode={setMode} />
+                </Box>
+              </ThemeProvider>
+            } 
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }
