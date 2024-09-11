@@ -72,6 +72,9 @@ function ContactUs() {
   return (
     <>
       <form onSubmit={handleSubmit} className="form-container">
+      <div>
+          <h2>Contact Us</h2>
+        </div>
         <div>
           <label htmlFor="userName" className="form-label">Name: </label>
           {errors.userName && <span className="error-message">{errors.userName}</span>}

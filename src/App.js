@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import ContactUs from './Components/ContactUs';
 import LandingPage from './mainfolder_MUI/pages/LandingPage';
 import ScopedSearch from './Components/ScopedSearch';
+import CheckFilter from './Components/CheckFilter';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Box, ThemeProvider, createTheme } from '@mui/material';
 import { useState } from 'react';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/pagination" element={<StoriesListPaginated />} />
           <Route path="/scopedSearch" element={<ScopedSearch />} />
+          <Route path="/checkFilter" element={<CheckFilter />} />
           <Route 
             path="/materialUI" 
             element={

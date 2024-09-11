@@ -78,8 +78,8 @@
   justify-content: space-between;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: -8px;
-  margin-bottom: -12px;
+  margin-top: -5px;
+  margin-bottom: -10px;
 }
 
 .searchTermsCont {
@@ -94,7 +94,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 13px;
-  margin: -1% 7% -1% 7%;
+  margin: 0% 7% 0% 7%;
 }
 
 /* pagination */
@@ -134,4 +134,9 @@
 }
 .numofrecordsdropdown{
   margin-top: 13px;
+}
+.dropdown{
+  height: 30px;
+  width: auto;
+  padding: 4px;
 }

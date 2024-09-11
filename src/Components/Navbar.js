@@ -17,6 +17,7 @@ function Navbar() {
                     <li><Link to="/pagination"> | pagination</Link></li>
                     <li><Link to="/materialUI"> | Material-UI</Link></li>
                     <li><Link to="/scopedSearch"> | Scoped Search</Link></li>
+                    <li><Link to="/checkFilter"> | Check Filter</Link></li>
                 </ul>
             </nav>
         </>

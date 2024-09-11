@@ -92,7 +92,7 @@ function StoriesList() {
     <>
       <div>
         <div className='searchTermsCont'>
-          <div style={{ marginTop: "10px" }}>
+          <div style={{ marginTop: "15px" }}>
             <label className='inputLabel' htmlFor='searchInput'>Search: </label>
             <input
               className="search-input"
@@ -103,7 +103,7 @@ function StoriesList() {
               onChange={handleSearch}
             />
           </div>
-          <div>
+          <div style={{ marginTop: "15px" }}>
             <label className='inputLabel' htmlFor='startDate'>From Date(yyyy-mm-dd): </label>
             <input
               className="search-input"
@@ -114,7 +114,7 @@ function StoriesList() {
               onChange={handleStartDateChange}
             />
           </div>
-          <div>
+          <div style={{ marginTop: "15px" }}>
             <label className='inputLabel' htmlFor='endDate'>To Date(yyyy-mm-dd): </label>
             <input
               className="search-input"
@@ -131,12 +131,12 @@ function StoriesList() {
           <p>Searching For: <span className='searchText'>{searchTerm}</span></p>
           <p>Total Story Count: {storyCount}</p>
         </div>
-        <hr />
+        <hr/>
       </div>
       <div className='filterdcountsectionCont'>
         <div className='numofrecordsdropdown'>
           <label htmlFor="recordsPerPage">No.of records per page:</label>&nbsp;
-          <select id="recordsPerPage" value={storiesPerPage} onChange={handleChange}>
+          <select className='dropdown' id="recordsPerPage" value={storiesPerPage} onChange={handleChange}>
             <option selected value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>

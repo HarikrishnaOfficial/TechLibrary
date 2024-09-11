@@ -68,6 +68,9 @@ function AddStoryForm() {
     <>
       <form onSubmit={handleSubmit} className="form-container">
         <div>
+          <h2>Add New Story</h2>
+        </div>
+        <div>
           <label htmlFor='title' className="form-label">Title: </label>
           {errors.title && <span className="error-message">{errors.title}</span>}
           <input

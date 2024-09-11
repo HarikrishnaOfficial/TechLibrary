@@ -1,0 +1,41 @@
+
+.survey-form {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-input, .form-radio, .form-checkbox {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-button {
+    padding: 10px 15px;
+    background-color: #249493;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #28aaa8;
+}
+.occupationCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.checkboxCont{
+    display: flex;
+    flex-direction: row;
+}

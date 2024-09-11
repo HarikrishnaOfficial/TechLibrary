@@ -1,5 +1,6 @@
 import React from 'react';
 import "../Styles/AboutUs.css"
+import SurveyForm from './SurveyForm';
 
 function AboutUs() {
   return (
@@ -17,7 +18,11 @@ function AboutUs() {
             We strive to Add technologies, filetr technologies .
           </p>
         </div>
+        <div>
+          <SurveyForm />
+        </div>
       </div>
+
     </>
   );
 };
