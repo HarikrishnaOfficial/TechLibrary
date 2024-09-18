@@ -175,7 +175,7 @@ function NavBar({mode, setMode}) {
             </Menu>
           </Box>
           <Typography onClick= {barHandler}>
-            Sidebar
+            Sidebar Draw
           </Typography>
         </Toolbar>
         {showBar && <SidebarSection open={showBar} onClose={()=>setShowBar(false)}/>}

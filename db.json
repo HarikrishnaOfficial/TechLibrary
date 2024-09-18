@@ -50,7 +50,7 @@
       "url": "https://graphql.org",
       "author": "Lee Byron, Nick Schrock",
       "num_comments": 4,
-      "points": 7,
+      "points": 55,
       "id": "ded1",
       "postedOn": "2023-06-22"
     },
@@ -68,7 +68,7 @@
       "url": "https://www.java.com/en/",
       "author": "James Gosling",
       "num_comments": 8,
-      "points": 11,
+      "points": "11",
       "id": "5596",
       "postedOn": "2023-08-14"
     },
@@ -82,31 +82,31 @@
       "id": "7801"
     },
     {
-      "id": "62b4",
-      "title": "sdfs",
+      "title": "sdfshgjhkg",
       "url": "https://www.atlassian.com/software/jira",
       "author": "ds",
-      "num_comments": "656",
-      "points": "99",
-      "postedOn": "2024-08-27"
+      "num_comments": 65,
+      "points": "9",
+      "postedOn": "2024-08-27",
+      "id": "62b4"
     },
     {
-      "id": "8c99",
       "title": "Jira",
       "url": "https://www.atlassian.com/software/jira",
       "author": "Atlassian",
-      "num_comments": "4",
+      "num_comments": "6",
       "points": "3",
-      "postedOn": "2024-08-29"
+      "postedOn": "2024-08-29",
+      "id": "8c99"
     },
     {
-      "id": "1c43",
-      "title": "Jirasdadd",
+      "title": "Jira Compass",
       "url": "https://www.atlassian.com/software/jira",
       "author": "Atlassian",
       "num_comments": "4",
       "points": "3",
-      "postedOn": "2024-08-29"
+      "postedOn": "2024-08-29",
+      "id": "1c43"
     }
   ],
   "books": [

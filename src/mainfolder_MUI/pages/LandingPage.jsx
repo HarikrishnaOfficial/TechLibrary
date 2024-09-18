@@ -6,6 +6,7 @@ import AccordianSection from '../components/AccordianSection'
 import CardDisplay from '../components/cardsection/CardDisplay'
 import MainTab from '../components/tabsection/MainTab'
 import MainGraph from '../components/graphsection/MainGraph'
+import EditableDataModel from "../components/EditlableTable/EditableDataModel"
 
 const LandingPage = ({mode, setMode}) => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = ({mode, setMode}) => {
             <CardDisplay />
             <MainTab />
             <MainGraph />
+            <EditableDataModel/>
         </Box>
     </Container>
        
