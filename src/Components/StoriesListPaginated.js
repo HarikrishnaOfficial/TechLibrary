@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import StoriesTable from './StoriesTable';
 import ReactPaginate from 'react-paginate';
+import Navbar from './Navbar';
 
 function StoriesList() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -90,6 +91,7 @@ function StoriesList() {
 
   return (
     <>
+    <Navbar/>
       <div>
         <div className='searchTermsCont'>
           <div style={{ marginTop: "15px" }}>

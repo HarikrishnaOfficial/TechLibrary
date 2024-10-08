@@ -37,7 +37,7 @@ describe('Navbar Component', () => {
             </Router>
         );
 
-        expect(screen.getByText('Home').closest('a')).toHaveAttribute('href', '/');
+        expect(screen.getByText('Home').closest('a')).toHaveAttribute('href', '/home');
         expect(screen.getByText('Add New Story').closest('a')).toHaveAttribute('href', '/addStory');
         expect(screen.getByText('About Us').closest('a')).toHaveAttribute('href', '/aboutUs');
         expect(screen.getByText('Contact Us').closest('a')).toHaveAttribute('href', '/contactUs');

@@ -7,21 +7,26 @@ import CardDisplay from '../components/cardsection/CardDisplay'
 import MainTab from '../components/tabsection/MainTab'
 import MainGraph from '../components/graphsection/MainGraph'
 import EditableDataModel from "../components/EditlableTable/EditableDataModel"
+import Navbar from '../../Components/Navbar'
 
-const LandingPage = ({mode, setMode}) => {
+const LandingPage = ({ mode, setMode }) => {
   return (
-    <Container>
+    <>
+      <Navbar />
+      <Container>
         <Box>
-            <NavBar mode={mode} setMode={setMode}/>
-            <HeroSection />
-            <AccordianSection />
-            <CardDisplay />
-            <MainTab />
-            <MainGraph />
-            <EditableDataModel/>
+          <NavBar mode={mode} setMode={setMode} />
+          <HeroSection />
+          <AccordianSection />
+          <CardDisplay />
+          <MainTab />
+          <MainGraph />
+          <EditableDataModel />
         </Box>
-    </Container>
-       
+      </Container>
+    </>
+
+
   )
 }
 

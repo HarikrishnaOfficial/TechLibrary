@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../Styles/CheckFilter.css";
+import Navbar from './Navbar';
 
 const CheckFilter = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -71,7 +72,8 @@ const CheckFilter = () => {
   };
 
   return (
-    <div>
+    <>
+    <Navbar/>
       <div className="search-container">
         <input
           type="text"
@@ -161,7 +163,7 @@ const CheckFilter = () => {
           </tbody>
         </table>
       )}
-    </div>
+    </>
   );
 };
 

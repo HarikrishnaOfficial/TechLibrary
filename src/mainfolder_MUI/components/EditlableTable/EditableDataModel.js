@@ -67,8 +67,7 @@ export default function ValidateRowModelControlGrid() {
       editRowsModel={editRowsModel}
       onEditRowsModelChange={handleEditRowsModelChange}
       processRowUpdate={processRowUpdate}
-      classes={{
-        root: 'centered-root',
+      sx={{
         columnHeader: 'centered-header',
         cell: 'centered-cell',
       }}

@@ -1,5 +1,5 @@
-.centered-root .MuiDataGrid-columnHeader,
-.centered-root .MuiDataGrid-cell {
+.MuiDataGrid-columnHeader,
+.MuiDataGrid-cell {
   display: flex;
   align-items: center;
   justify-content: center;

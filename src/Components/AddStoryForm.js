@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { formatDate } from '../utils/FormatDate';
 import { validateFormData } from '../utils/validateFormData';
+import Navbar from './Navbar';
 
 function AddStoryForm() {
   const [formData, setFormData] = useState({
@@ -53,19 +54,20 @@ function AddStoryForm() {
         alert("New Story is Added");
         console.log("Added story", response);
         setFormData(formReset);
-        navigate("/");
+        navigate("/home");
       });
     }
   };
 
   function handleCancel() {
     if (window.confirm("Are you sure you want to cancel?")) {
-      navigate("/");
+      navigate("/home");
     }
   }
 
   return (
     <>
+    <Navbar/>
       <form onSubmit={handleSubmit} className="form-container">
         <div>
           <h2>Add New Story</h2>

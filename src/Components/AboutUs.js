@@ -1,10 +1,12 @@
 import React from 'react';
 import "../Styles/AboutUs.css"
 import SurveyForm from './SurveyForm';
+import Navbar from './Navbar';
 
 function AboutUs() {
   return (
     <>
+      <Navbar/>
       <div className="about-us-container">
         <div className="about-us-content">
           <h2 className="about-us-heading">About Our Company</h2>

@@ -1,4 +1,10 @@
 {
+  "users":[
+    {
+      "email":"test1@gmail.com",
+      "password":"testuser1"
+    }
+  ],
   "stories": [
     {
       "title": "React",

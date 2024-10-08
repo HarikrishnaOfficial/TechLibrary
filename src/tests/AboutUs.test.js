@@ -6,11 +6,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AboutUs from '../Components/AboutUs';
 
 describe('AboutUs Component', () => {
   test('renders AboutUs component with correct content', () => {
-    render(<AboutUs />);
+    render(<Router>
+      <AboutUs />
+    </Router>
+    );
 
     const headingElement = screen.getByText(/About Our Company/i);
     expect(headingElement).toBeInTheDocument();

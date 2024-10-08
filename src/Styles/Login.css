@@ -1,0 +1,79 @@
+.mainContainer {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultContainer,
+.historyItem {
+    flex-direction: row;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.historyContainer {
+    flex-direction: column;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    flex-grow: 5;
+    justify-content: flex-start;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.inputContainer>.errorLabel {
+    color: red;
+    font-size: 12px;
+}
+
+.inputBox {
+    height: 35px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding-left: 5px;
+}
+
+input[type='button'] {
+    border: none;
+    background: #249493;
+    color: white;
+    padding: 8px 18px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navigation{
+    color: #249493;
+    text-decoration: underline;
+    cursor: pointer;
+}

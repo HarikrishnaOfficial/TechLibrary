@@ -31,6 +31,7 @@
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
+    "react-to-print": "^3.0.1",
     "ReactPOC": "file:",
     "rsuite": "^5.70.2",
     "search": "file:",

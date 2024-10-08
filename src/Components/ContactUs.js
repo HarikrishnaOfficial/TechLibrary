@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/AddStoryForm.css';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 function ContactUs() {
   const initialFormData = {
@@ -71,6 +72,7 @@ function ContactUs() {
 
   return (
     <>
+      <Navbar/>
       <form onSubmit={handleSubmit} className="form-container">
       <div>
           <h2>Contact Us</h2>

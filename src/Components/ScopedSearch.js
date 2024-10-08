@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/ScopedSearch.css';
+import Navbar from './Navbar';
 
 const ScopedSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -51,7 +52,8 @@ const ScopedSearch = () => {
   };
 
   return (
-    <div>
+    <>
+    <Navbar/>
       <div className="search-container">
         <input
           type="text"
@@ -105,7 +107,7 @@ const ScopedSearch = () => {
           </tbody>
         </table>
       )}
-    </div>
+    </>
   );
 };
 

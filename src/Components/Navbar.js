@@ -10,7 +10,7 @@ function Navbar() {
                     <h3 className="logo">Tech Library</h3>
                 </div>
                 <ul className="navigation-links">
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/home">Home</Link></li>
                     <li><Link to="/addStory">Add New Story</Link></li>
                     <li><Link to="/aboutUs">About Us</Link></li>
                     <li><Link to="/contactUs">Contact Us</Link></li>
@@ -18,6 +18,9 @@ function Navbar() {
                     <li><Link to="/materialUI"> | Material-UI</Link></li>
                     <li><Link to="/scopedSearch"> | Scoped Search</Link></li>
                     <li><Link to="/checkFilter"> | Check Filter</Link></li>
+                    <li onClick={() => localStorage.removeItem('loggedStatus')}>
+                        <Link to="/">Logout</Link>
+                    </li>
                 </ul>
             </nav>
         </>

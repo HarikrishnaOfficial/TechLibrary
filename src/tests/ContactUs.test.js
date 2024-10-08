@@ -5,6 +5,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 import ContactUs from '../Components/ContactUs';
 
@@ -17,7 +18,10 @@ describe('ContactUs Component', () => {
   });
 
   test('renders form inputs correctly', () => {
-    render(<ContactUs />);
+    render(<Router>
+      <ContactUs />
+    </Router>
+    );
 
     expect(screen.getByLabelText(/Name:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Email:/i)).toBeInTheDocument();
@@ -25,7 +29,10 @@ describe('ContactUs Component', () => {
   });
 
   test('shows error messages on invalid input', async () => {
-    render(<ContactUs />);
+    render(<Router>
+      <ContactUs />
+    </Router>
+    );
 
     fireEvent.click(screen.getByText(/Post/i));
 
@@ -37,7 +44,10 @@ describe('ContactUs Component', () => {
   test('submits the form successfully', async () => {
     axios.post.mockResolvedValue({ status: 200 });
 
-    render(<ContactUs />);
+    render(<Router>
+      <ContactUs />
+    </Router>
+    );
 
     fireEvent.change(screen.getByLabelText(/Name:/i), { target: { value: 'Test User' } });
     fireEvent.change(screen.getByLabelText(/Email:/i), { target: { value: 'test@example.com' } });

@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "email": "test1@gmail.com",
+      "password": "testuser1",
+      "id": "5be3"
+    },
+    {
+      "id": "3696",
+      "email": "test2@gmail.com",
+      "password": "testuser2"
+    }
+  ],
   "stories": [
     {
       "title": "React",
@@ -23,7 +35,7 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       "author": "Brendan Eich",
       "num_comments": 10,
-      "points": 8,
+      "points": 10,
       "id": "2f59",
       "postedOn": "2023-03-10"
     },
@@ -31,7 +43,7 @@
       "title": "TypeScript",
       "url": "https://www.typescriptlang.org",
       "author": "Anders Hejlsberg",
-      "num_comments": 7,
+      "num_comments": 8,
       "points": 6,
       "id": "a0aa",
       "postedOn": "2023-04-05"
