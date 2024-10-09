@@ -23,11 +23,11 @@ describe('Navbar Component', () => {
 
         // Checking if all navigation links are rendered
         expect(screen.getByText('Home')).toBeInTheDocument();
-        expect(screen.getByText('Add New Story')).toBeInTheDocument();
-        expect(screen.getByText('About Us')).toBeInTheDocument();
+        expect(screen.getByText('Add Story')).toBeInTheDocument();
+        expect(screen.getByText('About')).toBeInTheDocument();
         expect(screen.getByText('Contact Us')).toBeInTheDocument();
-        expect(screen.getByText('| Material-UI')).toBeInTheDocument();
-        expect(screen.getByText('| Scoped Search')).toBeInTheDocument();
+        expect(screen.getByText('MUI')).toBeInTheDocument();
+        expect(screen.getByText('Scoped Search')).toBeInTheDocument();
     });
 
     test('navigation links point to correct routes', () => {
@@ -38,10 +38,10 @@ describe('Navbar Component', () => {
         );
 
         expect(screen.getByText('Home').closest('a')).toHaveAttribute('href', '/home');
-        expect(screen.getByText('Add New Story').closest('a')).toHaveAttribute('href', '/addStory');
-        expect(screen.getByText('About Us').closest('a')).toHaveAttribute('href', '/aboutUs');
+        expect(screen.getByText('Add Story').closest('a')).toHaveAttribute('href', '/addStory');
+        expect(screen.getByText('About').closest('a')).toHaveAttribute('href', '/aboutUs');
         expect(screen.getByText('Contact Us').closest('a')).toHaveAttribute('href', '/contactUs');
-        expect(screen.getByText('| Material-UI').closest('a')).toHaveAttribute('href', '/materialUI');
-        expect(screen.getByText('| Scoped Search').closest('a')).toHaveAttribute('href', '/scopedSearch');
+        expect(screen.getByText('MUI').closest('a')).toHaveAttribute('href', '/materialUI');
+        expect(screen.getByText('Scoped Search').closest('a')).toHaveAttribute('href', '/scopedSearch');
     });
 });

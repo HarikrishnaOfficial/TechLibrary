@@ -3,14 +3,14 @@ import AddStoryForm from './Components/AddStoryForm';
 import StoriesList from './Components/StoriesList';
 import StoriesListPaginated from './Components/StoriesListPaginated';
 import AboutUs from './Components/AboutUs';
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import ContactUs from './Components/ContactUs';
 import LandingPage from './mainfolder_MUI/pages/LandingPage';
 import ScopedSearch from './Components/ScopedSearch';
 import CheckFilter from './Components/CheckFilter';
+import Reports from './Components/Reports';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Box, ThemeProvider, createTheme } from '@mui/material';
-import { useState } from 'react';
 import Login from './Components/Login';
 import Register from './Components/Register';
 
@@ -42,6 +42,7 @@ function App() {
           <Route path="/pagination" element={loggedStatus ? <StoriesListPaginated /> : <Navigate to="/" />} />
           <Route path="/scopedSearch" element={loggedStatus ? <ScopedSearch /> : <Navigate to="/" />} />
           <Route path="/checkFilter" element={loggedStatus ? <CheckFilter /> : <Navigate to="/" />} />
+          <Route path="/reports" element={loggedStatus ? <Reports /> : <Navigate to="/" />} />
           <Route 
             path="/materialUI" 
             element={

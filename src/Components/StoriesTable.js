@@ -1,22 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StoryUpdateModal from '../Models/StoryUpdateModal';
 import axios from 'axios';
-import { useReactToPrint } from "react-to-print";
 
 function StoriesTable({ stories, handleRemove, handleUpdate }) {
   const navigate = useNavigate();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedStory, setSelectedStory] = useState(null);
 
-  // For printing table content
-  const componentRef = useRef();
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-    documentTitle: "Tech Records",
-    onAfterPrint: () => alert("Printed")
-  });
-  
+
   function handleUpdateClick(id) {
     const story = stories.find(story => story.id === id);
     setSelectedStory(story);
@@ -42,36 +34,33 @@ function StoriesTable({ stories, handleRemove, handleUpdate }) {
 
   return (
     <>
-      <div ref={componentRef}>
-        <table className="storiesTable">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Comments</th>
-              <th>Points</th>
-              <th>Posted Date</th>
-              <th>Actions</th>
+      <table className="storiesTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Comments</th>
+            <th>Points</th>
+            <th>Posted Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stories.map(({ id, url, title, author, num_comments, points, postedOn }) => (
+            <tr key={id} className='tableRow'>
+              <td><a href={url} target="_blank" rel="noopener noreferrer" className='storyTitle'>{title}</a></td>
+              <td className='storyAuthor'>{author}</td>
+              <td className='storyComments'>{num_comments}</td>
+              <td className='storyPoints'>{points}</td>
+              <td className='storyPostedOn'>{postedOn}</td>
+              <td>
+                <button onClick={() => handleRemove(id)} className='removeButton'>Remove</button>
+                <button onClick={() => handleUpdateClick(id)} className='updateButton'>Update</button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {stories.map(({ id, url, title, author, num_comments, points, postedOn }) => (
-              <tr key={id} className='tableRow'>
-                <td><a href={url} target="_blank" rel="noopener noreferrer" className='storyTitle'>{title}</a></td>
-                <td className='storyAuthor'>{author}</td>
-                <td className='storyComments'>{num_comments}</td>
-                <td className='storyPoints'>{points}</td>
-                <td className='storyPostedOn'>{postedOn}</td>
-                <td>
-                  <button onClick={() => handleRemove(id)} className='removeButton'>Remove</button>
-                  <button onClick={() => handleUpdateClick(id)} className='updateButton'>Update</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <button onClick={()=>handlePrint}>Print article</button>
+          ))}
+        </tbody>
+      </table>
       {selectedStory && (
         <StoryUpdateModal
           isOpen={modalIsOpen}
