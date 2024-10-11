@@ -7,5 +7,16 @@
     height: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 92%;
+}
+
+.ExportMenu{
+    border: 1px solid #249493;
+    color: #249493;
+    background-color: white;
+    font-size: 16px;
+    padding: 1px;
+}
+.ExportMenu:hover {
+    color: #249499;
 }

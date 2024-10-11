@@ -3,6 +3,10 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import '../Styles/Reports.css';
 import { DataGrid } from '@mui/x-data-grid';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import * as XLSX from 'xlsx';
 
 function Reports() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -10,6 +14,14 @@ function Reports() {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [rowSelectionModel, setRowSelectionModel] = useState([]);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     const storyCount = stories.length;
 
@@ -53,7 +65,6 @@ function Reports() {
     });
 
     const filteredStoriesCount = filteredStories.length;
-    console.log("rows selected:" + rowSelectionModel)
 
     const columns = [
         { field: 'title', headerName: 'Title', width: 350 },
@@ -62,6 +73,22 @@ function Reports() {
         { field: 'num_comments', headerName: 'Comments', width: 150 },
         { field: 'postedOn', headerName: 'Posted On', width: 200 },
     ];
+
+    const exportToExcel = (data, fileName) => {
+        const worksheet = XLSX.utils.json_to_sheet(data);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+        XLSX.writeFile(workbook, `${fileName}.xlsx`);
+    };
+
+    const handleExportSelected = () => {
+        const selectedRows = rowSelectionModel.map(id => filteredStories.find(story => story.id === id));
+        exportToExcel(selectedRows, 'selected_stories');
+    };
+
+    const handleExportAll = () => {
+        exportToExcel(filteredStories, 'all_stories');
+    };
 
     return (
         <>
@@ -110,8 +137,29 @@ function Reports() {
                 <hr />
             </div>
             <div className='TableHeading'>
-            <p style={{fontSize: "12px"}}>Filtered Story Count: {filteredStoriesCount}/{storyCount}</p>
-                <button>Export</button>
+                <p style={{ fontSize: "12px" }}>Filtered Story Count: {filteredStoriesCount}/{storyCount}</p>
+                <div>
+                    <Button
+                        id="basic-button"
+                        className='ExportMenu'
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                    >☰</Button>
+                    <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <MenuItem onClick={() => { handleExportSelected(); handleClose(); }}>Export selected</MenuItem>
+                        <MenuItem onClick={() => { handleExportAll(); handleClose(); }}>Export all</MenuItem>
+                    </Menu>
+                </div>
             </div>
             <ul className='listItems'>
                 {filteredStories.length !== 0
