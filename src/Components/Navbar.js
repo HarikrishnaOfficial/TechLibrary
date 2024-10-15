@@ -14,7 +14,7 @@ function Navbar() {
                     <li><Link to="/addStory">Add Story</Link></li>
                     <li><Link to="/aboutUs">About</Link></li>
                     <li><Link to="/contactUs">Contact Us</Link></li>
-                    <li><Link to="/pagination">pagination</Link></li>
+                    <li><Link to="/pagination">Pagination</Link></li>
                     <li><Link to="/materialUI">MUI</Link></li>
                     <li><Link to="/scopedSearch">Scoped Search</Link></li>
                     <li><Link to="/checkFilter">Check Filter</Link></li>

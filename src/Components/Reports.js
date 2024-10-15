@@ -67,7 +67,7 @@ function Reports() {
     const filteredStoriesCount = filteredStories.length;
 
     const columns = [
-        { field: 'title', headerName: 'Title', width: 350 },
+        { field: 'title', headerName: 'Title', width: 350,headerClassName: 'super-app-theme--header'},
         { field: 'author', headerName: 'Author', width: 250 },
         { field: 'points', headerName: 'Points', width: 150 },
         { field: 'num_comments', headerName: 'Comments', width: 150 },

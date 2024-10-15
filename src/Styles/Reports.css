@@ -11,12 +11,14 @@
 }
 
 .ExportMenu{
-    border: 1px solid #249493;
-    color: #249493;
+    border: 1px solid #249493 !important;
+    color: #249493 !important;
     background-color: white;
     font-size: 16px;
-    padding: 1px;
 }
 .ExportMenu:hover {
     color: #249499;
 }
+/* .super-app-theme--header{
+    background-color: ;
+} */
